@@ -31,7 +31,7 @@ ENV JAVA_ALPINE_VERSION 8.131.11-r2
 RUN adduser -u 18345 -D cmp
 RUN set -x \
 	&& apk add --no-cache \
-		openjdk8-jre="$JAVA_ALPINE_VERSION" \
+		openjdk8-jre="$JAVA_ALPINE_VERSION" fontconfig\
 	&& [ "$JAVA_HOME" = "$(docker-java-home)" ]
 
 WORKDIR /home/cmp
